@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,19 +15,21 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.klisly.zuijizhao.R;
+import com.klisly.zuijizhao.ui.MenuContainerActivity;
 
 public class MenuFragment extends BaseFragment {
 	public MenuFragment() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	private String[] menus;
 	private ArrayList<HashMap<String, String>> items = new ArrayList<HashMap<String, String>>();
 	private ListView mMenuListView;
 	private BaseFragment[] fragments = { new HotFragment(),
-			new EliteFragment(),null, new CollectionFragment(),
+			new EliteFragment(), null, new CollectionFragment(),
 			new JoinedHotFragment(), new ReleasedFragment(),
-			new NoteFragment(),null, new CheckFragment() };
+			new NoteFragment(), null, new CheckFragment() };
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -84,11 +87,10 @@ public class MenuFragment extends BaseFragment {
 					menuText = (TextView) convertView
 							.findViewById(R.id.menuText);
 					convertView.setOnClickListener(new OnClickListener() {
-						
+
 						@Override
 						public void onClick(View v) {
-							
-						
+							switchFragment((Fragment)fragments[position]);
 						}
 					});
 				} else {
@@ -106,4 +108,14 @@ public class MenuFragment extends BaseFragment {
 		}
 	}
 
+	// the meat of switching the above fragment
+	private void switchFragment(Fragment fragment) {
+		if (getActivity() == null)
+			return;
+
+		if (getActivity() instanceof MenuContainerActivity) {
+			MenuContainerActivity mca = (MenuContainerActivity) getActivity();
+			mca.switchContent(fragment);
+		} 
+	}
 }

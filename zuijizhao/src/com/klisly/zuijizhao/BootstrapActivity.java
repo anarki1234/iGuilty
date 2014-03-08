@@ -1,4 +1,6 @@
-package com.klisly.zuijizhao.ui;
+package com.klisly.zuijizhao;
+
+import com.klisly.zuijizhao.ui.MenuContainerActivity;
 
 import android.app.Activity;
 import android.content.Intent;

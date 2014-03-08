@@ -9,12 +9,13 @@
         android:targetSdkVersion="18" />
 
     <application
+        android:name=".ZuijzApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/zuijizhao"
         android:theme="@style/Day" >
         <activity
-            android:name=".ui.BootstrapActivity" >
+            android:name=".BootstrapActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

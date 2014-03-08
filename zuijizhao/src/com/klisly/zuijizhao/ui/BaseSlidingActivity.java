@@ -2,6 +2,7 @@ package com.klisly.zuijizhao.ui;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.klisly.zuijizhao.R;
+import com.klisly.zuijizhao.ZuijzApplication;
 import com.klisly.zuijizhao.fragment.BaseFragment;
 import com.klisly.zuijizhao.fragment.HotFragment;
 import com.klisly.zuijizhao.fragment.MenuFragment;
@@ -14,6 +15,7 @@ import android.support.v4.app.ListFragment;
 
 
 public class BaseSlidingActivity extends BaseActivity {
+	
 	protected MenuFragment mFrag;
 	
 	public BaseSlidingActivity() {
@@ -23,7 +25,6 @@ public class BaseSlidingActivity extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		// set the Behind View
 		setBehindContentView(R.layout.fragment_menu);
 		if (savedInstanceState == null) {
