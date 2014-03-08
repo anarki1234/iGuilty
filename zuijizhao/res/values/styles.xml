@@ -1,0 +1,115 @@
+<resources>
+
+    <style name="ZuijizhaoTheme" parent="android:Theme.Holo.Light.NoActionBar">
+    </style>
+
+    <style name="Day" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="menu_bg">@style/day_menu_bg</item>
+        <item name="menutopbar">@style/day_menuTopbar</item>
+        <item name="topbar_bg">@style/day_topbar_bg</item>
+        <item name="setting">@style/day_setting</item>
+        <item name="menutopbar_usericon">@style/day_menuTopbar_usericon</item>
+        <item name="menutopbar_username">@style/day_menuTopbar_username</item>
+        <item name="side_menu_col">@style/day_side_menu_col</item>
+        <item name="menulist">@style/day_menulist</item>
+        <item name="menulistitem">@style/day_menulistitem</item>
+        <item name="menulistitem_menuName">@style/MenuListItem_menuName</item>
+        <item name="topbar_btn_backmenu">@style/day_topbar_btn_backmenu</item>
+        <item name="topbar_navi_bg2">@style/day_topbar_navi_bg2</item>
+        <item name="topbar_tag_active">@style/day_topbar_tag_active</item>
+        <item name="topbar_tag_enable">@style/day_topbar_tag_enable</item>
+        <item name="topbar_btn_release">@style/day_topbar_btn_release</item>
+    </style>
+
+    <style name="day_topbar_btn_release">
+        <item name="android:background">@drawable/icon_post_enable</item>
+        <item name="android:layout_marginLeft">35.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    
+    <style name="day_topbar_tag_enable">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/title_post</item>
+        <item name="android:background">@drawable/top_tab_normal</item>
+    </style>
+
+    <style name="day_topbar_tag_active">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/top_tab_active</item>
+    </style>
+
+    <style name="day_topbar_navi_bg2">
+        <item name="android:background">@drawable/top_tab_background2</item>
+    </style>
+
+    <style name="day_topbar_btn_backmenu">
+        <item name="android:background">@drawable/side_icon</item>
+        
+    </style>
+
+    <style name="day_menu_bg">
+        <item name="android:background">@drawable/menu_bg</item>
+    </style>
+
+    <style name="day_menuTopbar">
+        <item name="android:background">@drawable/menu_title_bg</item>
+    </style>
+
+    <style name="day_topbar_bg">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/top_bar_bg</item>
+    </style>
+
+    <style name="day_setting">
+        <item name="android:background">@drawable/side_user_bg</item>
+        <item name="android:src">@drawable/side_setting_icon</item>
+    </style>
+
+    <style name="day_menuTopbar_usericon">
+        <item name="android:background">@drawable/side_button_background</item>
+        <item name="android:src">@drawable/side_user_avatar</item>
+    </style>
+
+    <style name="day_menuTopbar_username">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#7f000000</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.5</item>
+        <item name="android:marqueeRepeatLimit">1</item>
+    </style>
+
+    <style name="day_side_menu_col">
+        <item name="android:src">@drawable/side_menu_col</item>
+    </style>
+
+    <style name="day_menulist">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@drawable/menu_seperator</item>
+    </style>
+
+    <style name="day_menulistitem">
+        <item name="android:background">@drawable/menu_item</item>
+    </style>
+
+    <style name="MenuListItem_menuName">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">#ffe5e1d5</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:shadowColor">#7f000000</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.5</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        style="?topbar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height" >
+
+        <RelativeLayout
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="@drawable/btn_click" >
+
+            <ImageView
+                style="?topbar_btn_backmenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/description_leftBtn" />
+
+            <ImageView
+                android:id="@+id/message_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left|center"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="7.0dip"
+                android:src="@drawable/messager_tips"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <LinearLayout
+                style="?topbar_navi_bg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/tab_left"
+                    style="?topbar_tag_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tag="active"
+                    android:text="@string/top" />
+
+                <Button
+                    android:id="@+id/tab_center"
+                    style="?topbar_tag_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="normal"
+                    android:text="@string/latest" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/location_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right|center"
+                android:src="@drawable/messager_tips"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_release"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true" >
+
+            <ImageButton
+                style="?topbar_btn_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/description_rightBtn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="none_color">#00000000</color>
+    <color name="bule_overlay">#660D92DD</color>
+    <color name="red">#990000</color>
+    <color name="green">#a7d500</color>
+    <color name="green_halfalpha">#f0009900</color>
+    <color name="blue">#3eb1e7</color>
+    <color name="blue_l">#46829e</color>
+    <color name="blue_m">#000099</color>
+    <color name="blue_s">#73dcff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey_xxl">#1a1a1a</color>
+    <color name="grey_xl">#565656</color>
+    <color name="grey_l">#a6a6a6</color>
+    <color name="grey_xm">#868686</color>
+    <color name="grey_m">#bebebe</color>
+    <color name="grey_m_halfapha">#90bebebe</color>
+    <color name="grey_xs">#ababab</color>
+    <color name="grey_xxs">#ececec</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="light_transparent">#e0000000</color>
+    <color name="recorder_bg">#ff191919</color>
+    <color name="title_post">#ff815f3d</color>
+
+</resources>

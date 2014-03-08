@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="zuijizhao">罪己诏</string>
+    <string name="description_user_avatar">用戶头像</string>
+    <string name="default_user_name">用戶名称</string>
+    <string name="description_setting">设置</string>
+    <string name="description_menu">右箭头</string>
+
+    <string-array name="menus">
+        <item name="tiezi_hot">热门</item>
+        <item name="tiezi_elite">精华</item>
+        <item name="item_seperate_one">seperate</item>
+        <item name="mine_collect">我收藏的</item>
+        <item name="mine_join">我参与的</item>
+        <item name="mine_publish">我发表的</item>
+        <item name="mine_notes">小纸条</item>
+        <item name="item_seperate_two">seperate</item>
+        <item name="manage_audit">审核罪己诏</item>
+    </string-array>
+    <string name="description_leftBtn">左按钮</string>
+    <string name="description_rightBtn">右按钮</string>
+    <string name="latest">最新</string>
+    <string name="top">热门</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menuLayout" type="id">false</item>
+    <item name="userLayout" type="id">false</item>
+    <item name="userIcon" type="id" />
+    <item name="userName" type="id" />
+    <item name="col" type="id" />
+    <item name="setting" type="id" />
+</resources>
