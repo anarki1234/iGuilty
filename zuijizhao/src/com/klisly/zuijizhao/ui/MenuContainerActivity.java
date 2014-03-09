@@ -5,12 +5,13 @@ import android.support.v4.app.Fragment;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.klisly.zuijizhao.R;
+import com.klisly.zuijizhao.fragment.BaseFragment;
 import com.klisly.zuijizhao.fragment.HotFragment;
 import com.klisly.zuijizhao.fragment.MenuFragment;
 
 public class MenuContainerActivity extends BaseSlidingActivity {
 
-	private Fragment mContent;
+	private BaseFragment mContent;
 
 	public MenuContainerActivity() {
 		super();
@@ -21,10 +22,12 @@ public class MenuContainerActivity extends BaseSlidingActivity {
 		super.onCreate(savedInstanceState);
 		// set the Above View
 		if (savedInstanceState != null)
-			mContent = getSupportFragmentManager().getFragment(
+			mContent = (BaseFragment)getSupportFragmentManager().getFragment(
 					savedInstanceState, "mContent");
-		if (mContent == null)
+		if (mContent == null){
 			mContent = new HotFragment();
+			mContent.setContext(this);
+		}
 
 		// set the Above View
 		setContentView(R.layout.activity_container);
@@ -47,8 +50,9 @@ public class MenuContainerActivity extends BaseSlidingActivity {
 		getSupportFragmentManager().putFragment(outState, "mContent", mContent);
 	}
 
-	public void switchContent(Fragment fragment) {
+	public void switchContent(BaseFragment fragment) {
 		mContent = fragment;
+		fragment.setContext(this);
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container, fragment).commit();
 		getSlidingMenu().showContent();

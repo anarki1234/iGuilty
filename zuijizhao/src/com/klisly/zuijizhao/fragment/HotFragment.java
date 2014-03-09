@@ -30,7 +30,7 @@ public class HotFragment extends BaseFragment implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_back:
-//			this.mContext.toggle();
+			mContext.toggle();
 			break;
 		case R.id.btn_release:
 			break;

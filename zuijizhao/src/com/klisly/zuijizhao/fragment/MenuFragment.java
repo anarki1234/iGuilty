@@ -90,7 +90,7 @@ public class MenuFragment extends BaseFragment {
 
 						@Override
 						public void onClick(View v) {
-							switchFragment((Fragment)fragments[position]);
+							switchFragment(fragments[position]);
 						}
 					});
 				} else {
@@ -109,7 +109,7 @@ public class MenuFragment extends BaseFragment {
 	}
 
 	// the meat of switching the above fragment
-	private void switchFragment(Fragment fragment) {
+	private void switchFragment(BaseFragment fragment) {
 		if (getActivity() == null)
 			return;
 
