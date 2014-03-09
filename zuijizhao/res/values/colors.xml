@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="black_overlay">#66000000</color>
-    <color name="none_color">#00000000</color>
-    <color name="bule_overlay">#660D92DD</color>
+    <color name="black_1">#404040</color>
+    <color name="gray">#696969</color>
+    <color name="pink">#FF6EB4</color>
+    <color name="transparent">#00000000</color>
+	<color name="half_transparent">#22000000</color>
+	<color name="hard_transparent">#b2000000</color>
     <color name="red">#990000</color>
     <color name="green">#a7d500</color>
     <color name="green_halfalpha">#f0009900</color>
@@ -18,12 +20,13 @@
     <color name="grey_l">#a6a6a6</color>
     <color name="grey_xm">#868686</color>
     <color name="grey_m">#bebebe</color>
+    <color name="grey_xxl_halfapha">#901a1a1a</color>
     <color name="grey_m_halfapha">#90bebebe</color>
     <color name="grey_xs">#ababab</color>
     <color name="grey_xxs">#ececec</color>
-    <color name="transparent">#00ffffff</color>
-    <color name="light_transparent">#e0000000</color>
+	<color name="black_overlay">#66000000</color>
+    <color name="none_color">#00000000</color>
+    <color name="bule_overlay">#660D92DD</color> 
     <color name="recorder_bg">#ff191919</color>
-    <color name="title_post">#ff815f3d</color>
-
+    <color name="bg_color">#B0875B</color>
 </resources>

@@ -14,9 +14,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_click"
             android:clickable="true"
-            android:gravity="center"
-            android:background="@drawable/btn_click" >
+            android:gravity="center" >
 
             <ImageView
                 style="?topbar_btn_backmenu"
@@ -41,30 +41,28 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true" >
 
-            <LinearLayout
-                style="?topbar_navi_bg2"
-                android:layout_width="wrap_content"
+            <RadioGroup
+                android:id="@+id/tabNavGroup"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center_vertical" >
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-                <Button
-                    android:id="@+id/tab_left"
-                    style="?topbar_tag_active"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb_drycargo"
+                    style="?top_tab_menu"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:tag="active"
-                    android:text="@string/top" />
+                    android:text="@string/drycargo" />
 
-                <Button
-                    android:id="@+id/tab_center"
-                    style="?topbar_tag_enable"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/rb_freshcargo"
+                    style="?top_tab_menu"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:tag="normal"
-                    android:text="@string/latest" />
-            </LinearLayout>
+                    android:text="@string/freshcargo" />
+            </RadioGroup>
 
             <ImageView
                 android:id="@+id/location_tip"
@@ -79,9 +77,10 @@
             android:id="@+id/btn_release"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_alignParentRight="true" >
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_click" >
 
-            <ImageButton
+            <ImageView
                 style="?topbar_btn_release"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
