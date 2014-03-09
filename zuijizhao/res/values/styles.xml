@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="ZuijizhaoTheme" parent="android:Theme.Holo.Light.NoActionBar">
     </style>
@@ -15,32 +15,28 @@
         <item name="menulistitem">@style/day_menulistitem</item>
         <item name="menulistitem_menuName">@style/MenuListItem_menuName</item>
         <item name="topbar_btn_backmenu">@style/day_topbar_btn_backmenu</item>
-        <item name="topbar_navi_bg2">@style/day_topbar_navi_bg2</item>
-        <item name="topbar_tag_active">@style/day_topbar_tag_active</item>
-        <item name="topbar_tag_enable">@style/day_topbar_tag_enable</item>
         <item name="topbar_btn_release">@style/day_topbar_btn_release</item>
+        <item name="top_tab_menu">@style/day_top_tab_menu</item>
     </style>
-
+	<style  name="day_top_tab_menu">
+	     <item name="android:textSize">@dimen/text_size_xl</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/click_nav_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:layout_weight">1.0</item>
+	</style>
+    
     <style name="day_topbar_btn_release">
         <item name="android:background">@drawable/icon_post_enable</item>
-        <item name="android:layout_marginLeft">35.0dip</item>
-        <item name="android:layout_marginRight">10.0dip</item>
-    </style>
-    
-    <style name="day_topbar_tag_enable">
-        <item name="android:textSize">17.0sp</item>
-        <item name="android:textColor">@color/title_post</item>
-        <item name="android:background">@drawable/top_tab_normal</item>
-    </style>
-
-    <style name="day_topbar_tag_active">
-        <item name="android:textSize">17.0sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:background">@drawable/top_tab_active</item>
-    </style>
-
-    <style name="day_topbar_navi_bg2">
-        <item name="android:background">@drawable/top_tab_background2</item>
     </style>
 
     <style name="day_topbar_btn_backmenu">
@@ -58,7 +54,7 @@
 
     <style name="day_topbar_bg">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:background">@drawable/top_bar_bg</item>
+        <item name="android:background">@color/bg_color</item>
     </style>
 
     <style name="day_setting">
@@ -111,5 +107,4 @@
         <item name="android:shadowRadius">1.5</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
-
 </resources>
