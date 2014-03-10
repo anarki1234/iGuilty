@@ -1,4 +1,4 @@
-package com.klisly.zuijizhao;
+package com.klisly.iguilty;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.util.Hashtable;
 import java.util.Properties;
 import java.util.UUID;
 
-import com.klisly.zuijizhao.utils.StringUtils;
+import com.klisly.iguilty.utils.StringUtils;
 
 import android.app.Application;
 import android.content.Context;

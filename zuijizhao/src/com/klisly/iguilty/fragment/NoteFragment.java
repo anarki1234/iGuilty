@@ -1,15 +1,15 @@
-package com.klisly.zuijizhao.fragment;
+package com.klisly.iguilty.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ReleasedFragment extends BaseFragment {
+public class NoteFragment extends BaseFragment {
 
 	
 	
-	public ReleasedFragment() {
+	public NoteFragment() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

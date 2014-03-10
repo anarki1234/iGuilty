@@ -1,13 +1,13 @@
-package com.klisly.zuijizhao.ui;
+package com.klisly.iguilty.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.klisly.iguilty.fragment.BaseFragment;
+import com.klisly.iguilty.fragment.HotFragment;
+import com.klisly.iguilty.fragment.MenuFragment;
 import com.klisly.zuijizhao.R;
-import com.klisly.zuijizhao.fragment.BaseFragment;
-import com.klisly.zuijizhao.fragment.HotFragment;
-import com.klisly.zuijizhao.fragment.MenuFragment;
 
 public class MenuContainerActivity extends BaseSlidingActivity {
 
@@ -22,23 +22,24 @@ public class MenuContainerActivity extends BaseSlidingActivity {
 		super.onCreate(savedInstanceState);
 		// set the Above View
 		if (savedInstanceState != null)
-			mContent = (BaseFragment)getSupportFragmentManager().getFragment(
+			mContent = (BaseFragment) getSupportFragmentManager().getFragment(
 					savedInstanceState, "mContent");
-		if (mContent == null){
+		if (mContent == null) {
 			mContent = new HotFragment();
 			mContent.setContext(this);
 		}
 
 		// set the Above View
 		setContentView(R.layout.activity_container);
-		
+
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.fragment_container, mContent).commit();
 
 		// set the Behind View
 		setBehindContentView(R.layout.fragment_menu);
 		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.fragment_menu_container, new MenuFragment()).commit();
+				.replace(R.id.fragment_menu_container, new MenuFragment())
+				.commit();
 
 		// customize the SlidingMenu
 		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
@@ -58,4 +59,8 @@ public class MenuContainerActivity extends BaseSlidingActivity {
 		getSlidingMenu().showContent();
 	}
 
+	@Override
+	public void toggle() {
+		super.toggle();
+	}
 }

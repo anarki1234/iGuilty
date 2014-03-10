@@ -1,11 +1,11 @@
-package com.klisly.zuijizhao.ui;
+package com.klisly.iguilty.ui;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.klisly.iguilty.ZuijzApplication;
+import com.klisly.iguilty.fragment.BaseFragment;
+import com.klisly.iguilty.fragment.HotFragment;
+import com.klisly.iguilty.fragment.MenuFragment;
 import com.klisly.zuijizhao.R;
-import com.klisly.zuijizhao.ZuijzApplication;
-import com.klisly.zuijizhao.fragment.BaseFragment;
-import com.klisly.zuijizhao.fragment.HotFragment;
-import com.klisly.zuijizhao.fragment.MenuFragment;
 
 import android.os.Bundle;
 import android.os.Handler;

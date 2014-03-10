@@ -1,4 +1,4 @@
-package com.klisly.zuijizhao.fragment;
+package com.klisly.iguilty.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

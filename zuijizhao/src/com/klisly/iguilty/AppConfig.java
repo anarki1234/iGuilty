@@ -1,11 +1,11 @@
-package com.klisly.zuijizhao;
+package com.klisly.iguilty;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Properties;
 
-import com.klisly.zuijizhao.utils.StringUtils;
+import com.klisly.iguilty.utils.StringUtils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

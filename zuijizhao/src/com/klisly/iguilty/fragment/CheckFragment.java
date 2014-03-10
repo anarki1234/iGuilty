@@ -1,15 +1,15 @@
-package com.klisly.zuijizhao.fragment;
+package com.klisly.iguilty.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class EliteFragment extends BaseFragment {
+public class CheckFragment extends BaseFragment {
 
 	
 	
-	public EliteFragment() {
+	public CheckFragment() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

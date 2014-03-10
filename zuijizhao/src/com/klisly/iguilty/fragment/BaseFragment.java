@@ -1,9 +1,9 @@
-package com.klisly.zuijizhao.fragment;
+package com.klisly.iguilty.fragment;
 
 import android.support.v4.app.Fragment;
 
-import com.klisly.zuijizhao.ZuijzApplication;
-import com.klisly.zuijizhao.ui.MenuContainerActivity;
+import com.klisly.iguilty.ZuijzApplication;
+import com.klisly.iguilty.ui.MenuContainerActivity;
 
 public abstract class BaseFragment extends Fragment {
 	protected MenuContainerActivity mContext;

@@ -1,7 +1,7 @@
-package com.klisly.zuijizhao.ui;
+package com.klisly.iguilty.ui;
 
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-import com.klisly.zuijizhao.AppManager;
+import com.klisly.iguilty.AppManager;
 
 import android.app.Activity;
 import android.os.Bundle;

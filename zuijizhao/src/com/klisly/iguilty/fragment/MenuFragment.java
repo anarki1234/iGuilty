@@ -1,4 +1,4 @@
-package com.klisly.zuijizhao.fragment;
+package com.klisly.iguilty.fragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +6,7 @@ import java.util.HashMap;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,16 +14,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.klisly.iguilty.ui.MenuContainerActivity;
 import com.klisly.zuijizhao.R;
-import com.klisly.zuijizhao.ui.MenuContainerActivity;
 
 public class MenuFragment extends BaseFragment {
-	public MenuFragment() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
+	private MenuListAdapter menuAdapter;
 	private String[] menus;
 	private ArrayList<HashMap<String, String>> items = new ArrayList<HashMap<String, String>>();
 	private ListView mMenuListView;
@@ -30,6 +28,10 @@ public class MenuFragment extends BaseFragment {
 			new EliteFragment(), null, new CollectionFragment(),
 			new JoinedHotFragment(), new ReleasedFragment(),
 			new NoteFragment(), null, new CheckFragment() };
+
+	public MenuFragment() {
+		super();
+	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class MenuFragment extends BaseFragment {
 		}
 
 		mMenuListView = (ListView) v.findViewById(R.id.menulist);
-		MenuListAdapter menuAdapter = new MenuListAdapter(this.getActivity());
+		menuAdapter = new MenuListAdapter(this.getActivity());
 		mMenuListView.setAdapter(menuAdapter);
 		mMenuListView.setVisibility(View.VISIBLE);
 		return v;
@@ -50,6 +52,23 @@ public class MenuFragment extends BaseFragment {
 
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		menuAdapter.notifyDataSetChanged();
+	}
+
+	// the meat of switching the above fragment
+	private void switchFragment(BaseFragment fragment) {
+		if (getActivity() == null)
+			return;
+
+		if (getActivity() instanceof MenuContainerActivity) {
+			MenuContainerActivity mca = (MenuContainerActivity) getActivity();
+			mca.switchContent(fragment);
+		}
 	}
 
 	class MenuListAdapter extends BaseAdapter {
@@ -78,7 +97,7 @@ public class MenuFragment extends BaseFragment {
 
 		public View getView(final int position, View convertView,
 				ViewGroup parent) {
-
+			Log.e("MenuFragent", "menu Adapter");
 			TextView menuText = null;
 			if (convertView == null) {
 				if (!menus[position].equals("seperate")) {
@@ -101,21 +120,33 @@ public class MenuFragment extends BaseFragment {
 					convertView.setLayoutParams(rlParams);
 					convertView.setFocusable(false);
 				}
+			} else {
+				if (!menus[position].equals("seperate")) {
+					menuText = (TextView) convertView
+							.findViewById(R.id.menuText);
+					convertView.setOnClickListener(new OnClickListener() {
+
+						@Override
+						public void onClick(View v) {
+
+							switchFragment(fragments[position]);
+						}
+					});
+					convertView
+							.setBackgroundResource(R.drawable.side_menu_background_active);
+				} else {
+					convertView.setBackgroundResource(R.drawable.menu_bg);
+					ListView.LayoutParams rlParams = new ListView.LayoutParams(
+							ListView.LayoutParams.MATCH_PARENT, 10);
+					convertView.setLayoutParams(rlParams);
+					convertView.setFocusable(false);
+				}
 			}
-			if (menuText != null)
+			if (menuText != null) {
 				menuText.setText(menus[position]);
+			}
 			return convertView;
 		}
 	}
 
-	// the meat of switching the above fragment
-	private void switchFragment(BaseFragment fragment) {
-		if (getActivity() == null)
-			return;
-
-		if (getActivity() instanceof MenuContainerActivity) {
-			MenuContainerActivity mca = (MenuContainerActivity) getActivity();
-			mca.switchContent(fragment);
-		} 
-	}
 }

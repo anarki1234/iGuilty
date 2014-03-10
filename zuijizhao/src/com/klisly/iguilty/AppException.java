@@ -1,4 +1,4 @@
-package com.klisly.zuijizhao;
+package com.klisly.iguilty;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -18,7 +18,7 @@ import android.os.Environment;
 import android.os.Looper;
 import android.widget.Toast;
 
-import com.klisly.zuijizhao.utils.UIHelper;
+import com.klisly.iguilty.utils.UIHelper;
 
 /**
  * 应用程序异常类：用于捕获异常和提示错误信息

@@ -1,15 +1,15 @@
-package com.klisly.zuijizhao.fragment;
+package com.klisly.iguilty.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class JoinedHotFragment extends BaseFragment {
+public class CollectionFragment extends BaseFragment {
 
 	
 	
-	public JoinedHotFragment() {
+	public CollectionFragment() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
