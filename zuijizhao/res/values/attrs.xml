@@ -14,5 +14,6 @@
     <attr name="topbar_btn_backmenu"></attr>
     <attr name="topbar_btn_release"></attr>
     <attr name="top_tab_menu"></attr>
+    <attr name="guilty_list_item"></attr>
 
 </resources>

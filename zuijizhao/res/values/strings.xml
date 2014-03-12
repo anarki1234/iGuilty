@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="zuijizhao">罪己诏</string>
+    <string name="zuijizhao">iGuilty</string>
     <string name="description_user_avatar">用戶头像</string>
     <string name="default_user_name">用戶名称</string>
     <string name="description_setting">设置</string>

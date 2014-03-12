@@ -7,8 +7,7 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.klisly.iguilty.fragment.BaseFragment;
 import com.klisly.iguilty.fragment.HotFragment;
 import com.klisly.iguilty.fragment.MenuFragment;
-import com.klisly.zuijizhao.R;
-
+import com.klisly.iguilty.R;
 public class MenuContainerActivity extends BaseSlidingActivity {
 
 	private BaseFragment mContent;

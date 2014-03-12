@@ -1,14 +1,23 @@
 package com.klisly.iguilty.fragment;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
-import com.klisly.zuijizhao.R;
+import com.klisly.iguilty.R;
+import com.klisly.iguilty.adapter.ListViewHotAdapter;
+import com.klisly.iguilty.bean.GuiltyEntry;
 
 public class HotFragment extends BaseFragment implements OnClickListener {
+	private ListViewHotAdapter mListViewHotAdapter;
+	private ListView mHotListView;
 	public HotFragment() {
 		super();
 	}
@@ -19,7 +28,46 @@ public class HotFragment extends BaseFragment implements OnClickListener {
 
 		v.findViewById(R.id.btn_back).setOnClickListener(this);
 		v.findViewById(R.id.btn_release).setOnClickListener(this);
+		
+		mHotListView = (ListView) v.findViewById(R.id.hotlist);
+		
+		List<GuiltyEntry> items = new ArrayList<GuiltyEntry>();
+		for(int i = 0 ; i< 20 ; i ++){
+			GuiltyEntry guiltyEntry= new GuiltyEntry();
+			guiltyEntry.setAvatar("http://baidu.com/index.jpg");
+			guiltyEntry.setContentAudio("http://baidu.com/audio.jpg");
+			guiltyEntry.setContenText("这是一个测试算法");
+			guiltyEntry.setContentImage( "http://baidu.com/image.jpg");
+			guiltyEntry.setGuiltyId("200012002");
+			guiltyEntry.setNickname("iGuilty");
+			guiltyEntry.setPraise(new Random().nextInt(1000));
+			guiltyEntry.setUid("290099303");
+			items.add(guiltyEntry);
+		}
+		
+		mListViewHotAdapter = new ListViewHotAdapter(mContext, items, R.layout.module_guilty_item);
+		mHotListView.setAdapter(mListViewHotAdapter);
+		
+//		bindData();
 		return v;
+	}
+
+
+	private void bindData() {
+		List<GuiltyEntry> items = new ArrayList<GuiltyEntry>();
+		for(int i = 0 ; i< 20 ; i ++){
+			GuiltyEntry guiltyEntry= new GuiltyEntry();
+			guiltyEntry.setAvatar("http://baidu.com/index.jpg");
+			guiltyEntry.setContentAudio("http://baidu.com/audio.jpg");
+			guiltyEntry.setContenText("这是一个测试算法");
+			guiltyEntry.setContentImage( "http://baidu.com/image.jpg");
+			guiltyEntry.setGuiltyId("200012002");
+			guiltyEntry.setNickname("iGuilty");
+			guiltyEntry.setPraise(new Random().nextInt(1000));
+			guiltyEntry.setUid("290099303");
+			items.add(guiltyEntry);
+		}
+		
 	}
 
 	public void onActivityCreated(Bundle savedInstanceState) {

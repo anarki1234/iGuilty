@@ -5,7 +5,7 @@ import com.klisly.iguilty.ZuijzApplication;
 import com.klisly.iguilty.fragment.BaseFragment;
 import com.klisly.iguilty.fragment.HotFragment;
 import com.klisly.iguilty.fragment.MenuFragment;
-import com.klisly.zuijizhao.R;
+import com.klisly.iguilty.R;
 
 import android.os.Bundle;
 import android.os.Handler;
