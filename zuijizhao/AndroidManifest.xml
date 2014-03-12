@@ -13,7 +13,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/zuijizhao"
-        android:theme="@style/Day" >
+        android:theme="@style/AppBaseTheme" >
         <activity
             android:name="com.klisly.iguilty.BootstrapActivity" >
             <intent-filter>

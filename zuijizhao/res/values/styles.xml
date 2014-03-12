@@ -1,7 +1,23 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="ZuijizhaoTheme" parent="android:Theme.Light.NoTitleBar"></style>
 
+      <style name="Day_Gear" parent="android:Theme.Light.NoTitleBar">
+        <item name="menu_bg">@style/day_menu_bg</item>
+        <item name="menutopbar">@style/day_menuTopbar</item>
+        <item name="topbar_bg">@style/day_topbar_bg</item>
+        <item name="setting">@style/day_setting</item>
+        <item name="menutopbar_usericon">@style/day_menuTopbar_usericon</item>
+        <item name="menutopbar_username">@style/day_menuTopbar_username</item>
+        <item name="side_menu_col">@style/day_side_menu_col</item>
+        <item name="menulist">@style/day_menulist</item>
+        <item name="menulistitem">@style/day_menulistitem</item>
+        <item name="menulistitem_menuName">@style/MenuListItem_menuName</item>
+        <item name="topbar_btn_backmenu">@style/day_topbar_btn_backmenu</item>
+        <item name="topbar_btn_release">@style/day_topbar_btn_release</item>
+        <item name="top_tab_menu">@style/day_top_tab_menu</item>
+        <item name="guilty_list_item">@style/day_guilty_list_item</item>
+    </style>
+    
     <style name="Day" parent="android:Theme.Holo.Light.NoActionBar">
         <item name="menu_bg">@style/day_menu_bg</item>
         <item name="menutopbar">@style/day_menuTopbar</item>
