@@ -38,7 +38,7 @@ public class MenuContainerActivity extends BaseSlidingActivity {
 				.replace(R.id.fragment_container, mContent).commit();
 
 		// set the Behind View
-		setBehindContentView(R.layout.fragment_menu);
+		setBehindContentView(R.layout.frame_menu);
 
 		MenuFragment mMenuFragment = new MenuFragment();
 		mMenuFragment.setContext(MenuContainerActivity.this);

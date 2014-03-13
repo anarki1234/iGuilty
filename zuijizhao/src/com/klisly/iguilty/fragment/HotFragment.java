@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 import com.klisly.iguilty.R;
 import com.klisly.iguilty.adapter.ListViewHotAdapter;
 import com.klisly.iguilty.bean.GuiltyEntry;
+import com.klisly.iguilty.utils.UIHelper;
 
 public class HotFragment extends BaseFragment implements OnClickListener {
 	private ListViewHotAdapter mListViewHotAdapter;
@@ -26,9 +28,8 @@ public class HotFragment extends BaseFragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_hot, null);
 
-		v.findViewById(R.id.btn_back).setOnClickListener(this);
-		v.findViewById(R.id.btn_release).setOnClickListener(this);
-		
+		v.findViewById(R.id.ll_btn_back).setOnClickListener(this);
+		v.findViewById(R.id.ll_btn_release).setOnClickListener(this);
 		mHotListView = (ListView) v.findViewById(R.id.hotlist);
 		
 		List<GuiltyEntry> items = new ArrayList<GuiltyEntry>();
@@ -77,10 +78,11 @@ public class HotFragment extends BaseFragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btn_back:
+		case R.id.ll_btn_back:
 			mContext.toggle();
 			break;
-		case R.id.btn_release:
+		case R.id.ll_btn_release:
+			UIHelper.openReleaseActivity((Activity)this.getActivity());
 			break;
 		}
 	}

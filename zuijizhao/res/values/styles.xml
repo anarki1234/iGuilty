@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-      <style name="Day_Gear" parent="android:Theme.Light.NoTitleBar">
+    <style name="Day_Gear" parent="android:Theme.Light.NoTitleBar">
         <item name="menu_bg">@style/day_menu_bg</item>
         <item name="menutopbar">@style/day_menuTopbar</item>
         <item name="topbar_bg">@style/day_topbar_bg</item>
@@ -17,7 +17,7 @@
         <item name="top_tab_menu">@style/day_top_tab_menu</item>
         <item name="guilty_list_item">@style/day_guilty_list_item</item>
     </style>
-    
+
     <style name="Day" parent="android:Theme.Holo.Light.NoActionBar">
         <item name="menu_bg">@style/day_menu_bg</item>
         <item name="menutopbar">@style/day_menuTopbar</item>
@@ -132,5 +132,22 @@
         <item name="android:shadowRadius">1.5</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
 
 </resources>

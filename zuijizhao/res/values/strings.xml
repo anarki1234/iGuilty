@@ -6,8 +6,8 @@
     <string name="default_user_name">用戶名称</string>
     <string name="description_setting">设置</string>
     <string name="description_menu">右箭头</string>
-	
-	<string name="seperate_holder">seperate</string><!-- 菜单占位符 -->
+    <string name="seperate_holder">seperate</string>
+ <!-- 菜单占位符 -->
     <string-array name="menus">
         <item name="tiezi_hot">热门</item>
         <item name="tiezi_elite">精华</item>
@@ -19,11 +19,15 @@
         <item name="item_seperate_two">seperate</item>
         <item name="manage_audit">审核罪己诏</item>
     </string-array>
+
     <string name="description_leftBtn">左按钮</string>
     <string name="description_rightBtn">右按钮</string>
     <string name="latest">最新</string>
     <string name="top">热门</string>
     <string name="drycargo">干货</string>
     <string name="freshcargo">嫩草</string>
+    <string name="title_activity_user_center">UserCenterActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

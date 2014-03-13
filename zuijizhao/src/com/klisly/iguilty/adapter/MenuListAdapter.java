@@ -64,7 +64,6 @@ public class MenuListAdapter extends BaseAdapter {
 			// 获取控件对象
 			listItemView.mTvTitle = (TextView) convertView
 					.findViewById(R.id.tv_menu_text);
-			Log.e("MenuFragent", "获取控件对象");
 			convertView.setTag(listItemView);
 		} else {
 			listItemView = (ListItemView) convertView.getTag();

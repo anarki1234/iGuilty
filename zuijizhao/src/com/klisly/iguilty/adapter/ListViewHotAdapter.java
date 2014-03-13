@@ -89,7 +89,6 @@ public class ListViewHotAdapter extends BaseAdapter{
 		//设置文字和图片
 		GuiltyEntry guilty = listItems.get(position);
 		
-		listItemView.mTvBtnAvatar.setText(guilty.getAvatar());
 		listItemView.mTvBtnAvatar.setTag(guilty);
 		listItemView.mTvBtnAvatar.setOnClickListener(new OnClickListener() {
 			

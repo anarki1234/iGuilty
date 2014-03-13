@@ -1,5 +1,7 @@
 package com.klisly.iguilty.fragment;
 
+import com.klisly.iguilty.R;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,8 @@ public class CheckFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return super.onCreateView(inflater, container, savedInstanceState);
+		View v = inflater.inflate(R.layout.fragment_check, null);
+		return v;
 	}
 	
 	

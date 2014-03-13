@@ -26,7 +26,7 @@ public class BaseSlidingActivity extends BaseActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// set the Behind View
-		setBehindContentView(R.layout.fragment_menu);
+		setBehindContentView(R.layout.frame_menu);
 		if (savedInstanceState == null) {
 			FragmentTransaction t = this.getSupportFragmentManager()
 					.beginTransaction();
