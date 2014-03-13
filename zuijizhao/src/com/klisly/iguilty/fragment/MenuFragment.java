@@ -1,28 +1,23 @@
 package com.klisly.iguilty.fragment;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.klisly.iguilty.R;
+import com.klisly.iguilty.adapter.MenuListAdapter;
+import com.klisly.iguilty.bean.MenuEntry;
+import com.klisly.iguilty.bean.MenuEntry.State;
 import com.klisly.iguilty.ui.MenuContainerActivity;
 
 public class MenuFragment extends BaseFragment {
 	private MenuListAdapter menuAdapter;
 	private String[] menus;
-	private ArrayList<HashMap<String, String>> items = new ArrayList<HashMap<String, String>>();
 	private ListView mMenuListView;
 	private BaseFragment[] fragments = { new HotFragment(),
 			new EliteFragment(), null, new CollectionFragment(),
@@ -37,16 +32,21 @@ public class MenuFragment extends BaseFragment {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.module_menu_scroll_view, null);
 		menus = this.getActivity().getResources().getStringArray(R.array.menus);
-		for (String menu : menus) {
-			HashMap<String, String> item = new HashMap<String, String>();
-			item.put("itemname", menu);
-			items.add(item);
+		ArrayList<MenuEntry> items = new ArrayList<MenuEntry>();
+		for (int i = 0; i < menus.length; i++) {
+			MenuEntry mMenuEntry = new MenuEntry();
+			mMenuEntry.setName(menus[i]);
+			mMenuEntry.setState(State.UNCHECKED);
+			if (fragments[i] != null)
+				mMenuEntry.setFragment((BaseFragment) fragments[i]);
+			else
+				mMenuEntry.setFragment(null);
+			items.add(mMenuEntry);
 		}
-
 		mMenuListView = (ListView) v.findViewById(R.id.menulist);
-		menuAdapter = new MenuListAdapter(this.getActivity());
+		menuAdapter = new MenuListAdapter((MenuContainerActivity)this.getActivity(), items,
+				R.layout.module_menu_item);
 		mMenuListView.setAdapter(menuAdapter);
-		mMenuListView.setVisibility(View.VISIBLE);
 		return v;
 	}
 
@@ -57,75 +57,7 @@ public class MenuFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		menuAdapter.notifyDataSetChanged();
 	}
 
-	// the meat of switching the above fragment
-	private void switchFragment(BaseFragment fragment) {
-		if (getActivity() == null)
-			return;
-
-		if (getActivity() instanceof MenuContainerActivity) {
-			MenuContainerActivity mca = (MenuContainerActivity) getActivity();
-			mca.switchContent(fragment);
-		}
-	}
-
-	class MenuListAdapter extends BaseAdapter {
-		private Context mContext;
-
-		public MenuListAdapter(Context context) {
-			mContext = context;
-		}
-
-		public int getCount() {
-			return menus.length;
-		}
-
-		@Override
-		public boolean areAllItemsEnabled() {
-			return false;
-		}
-
-		public Object getItem(int position) {
-			return menus[position];
-		}
-
-		public long getItemId(int position) {
-			return position;
-		}
-
-		public View getView(final int position, View convertView,
-				ViewGroup parent) {
-			Log.e("MenuFragent", "menu Adapter");
-			TextView menuText = null;
-			if (convertView == null) {
-				if (!menus[position].equals("seperate")) {
-					convertView = LayoutInflater.from(mContext).inflate(
-							R.layout.module_menu_list_item, null);
-					menuText = (TextView) convertView
-							.findViewById(R.id.menuText);
-					convertView.setOnClickListener(new OnClickListener() {
-
-						@Override
-						public void onClick(View v) {
-							switchFragment(fragments[position]);
-						}
-					});
-				} else {
-					convertView = new View(mContext);
-					convertView.setBackgroundResource(R.drawable.menu_bg);
-					ListView.LayoutParams rlParams = new ListView.LayoutParams(
-							ListView.LayoutParams.MATCH_PARENT, 10);
-					convertView.setLayoutParams(rlParams);
-					convertView.setFocusable(false);
-				}
-			} 
-			if (menuText != null) {
-				menuText.setText(menus[position]);
-			}
-			return convertView;
-		}
-	}
 
 }

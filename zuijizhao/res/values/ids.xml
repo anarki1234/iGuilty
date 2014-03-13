@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="selected_view" type="id"/>
     <item name="menuLayout" type="id">false</item>
     <item name="userLayout" type="id">false</item>
     <item name="userIcon" type="id" />
