@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color" >
 
     <LinearLayout
         android:id="@+id/menuLayout"
-        style="?menu_bg"
+        style="?topbar_bg"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
         <LinearLayout
-            style="?menutopbar"
+            style="?topbar_bg"
             android:layout_width="fill_parent"
             android:layout_height="46.0dip"
             android:clickable="true"
@@ -19,10 +20,11 @@
 
             <LinearLayout
                 android:id="@+id/ll_btn_user"
-                style="?setting"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="1.0"
+                android:background="@drawable/btn_click"
+                android:clickable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
@@ -31,9 +33,8 @@
                     style="?menutopbar_usericon"
                     android:layout_width="@dimen/image_avatar_size"
                     android:layout_height="@dimen/image_avatar_size"
-                    android:layout_marginLeft="10.0dip"
                     android:contentDescription="@string/description_user_avatar"
-                    android:padding="0.8000001dip" />
+                    android:paddingLeft="10dp" />
 
                 <TextView
                     android:id="@+id/userName"
@@ -45,22 +46,33 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/col"
-                style="?side_menu_col"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent" />
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="#E9F0F4" />
 
-            <ImageButton
-                android:id="@+id/ib_btn_setting"
-                style="?setting"
+            <RelativeLayout
+                android:id="@+id/rl_btn_setting"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:button="@null"
-                android:contentDescription="@string/description_setting"
-                android:gravity="center_vertical"
-                android:paddingLeft="2.0dip"
-                android:paddingRight="2.0dip" />
+                android:layout_height="@dimen/title_height"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    style="?setting"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ico_setting"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
 
         <ListView
             android:id="@+id/menulist"
@@ -70,5 +82,11 @@
             android:layout_weight="1.0"
             android:fadingEdge="none"
             android:footerDividersEnabled="true" />
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
+         
     </LinearLayout>
+
 </FrameLayout>

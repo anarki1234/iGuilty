@@ -2,14 +2,12 @@ package com.klisly.iguilty.ui;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.klisly.iguilty.R;
 import com.klisly.iguilty.fragment.BaseFragment;
 import com.klisly.iguilty.fragment.HotFragment;
 import com.klisly.iguilty.fragment.MenuFragment;
-import com.klisly.iguilty.R;
 
 public class MenuContainerActivity extends BaseSlidingActivity {
 

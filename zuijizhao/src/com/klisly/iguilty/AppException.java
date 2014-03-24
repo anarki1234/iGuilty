@@ -13,12 +13,8 @@ import java.util.Date;
 import org.apache.http.HttpException;
 
 import android.content.Context;
-import android.content.pm.PackageInfo;
 import android.os.Environment;
 import android.os.Looper;
-import android.widget.Toast;
-
-import com.klisly.iguilty.utils.UIHelper;
 
 /**
  * 应用程序异常类：用于捕获异常和提示错误信息

@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_topbar"
+        style="?topbar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_click"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ico_back_w" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记录教训"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xl" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_btn_release"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_click"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="发布"
+                android:textColor="@color/light_pink"
+                android:textSize="@dimen/text_size_l" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_guilty_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/edittext_no_border"
+        android:imeOptions="flagNoExtractUi"
+        android:gravity="left|top"
+        android:hint="发布Guilty"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_l" />
+
+    <LinearLayout
+        android:id="@+id/ll_footbar"
+        style="?topbar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+		
+        <ImageView
+            android:id="@+id/iv_guilty_picture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:src="@drawable/sample_img" />
+
+        <RelativeLayout
+            android:id="@+id/rl_btn_camera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_click"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ico_camera" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_btn_album"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_click"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ico_album" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

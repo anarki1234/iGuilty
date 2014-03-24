@@ -5,25 +5,33 @@
     android:layout_height="30dp"
     android:clickable="true" >
 
-    <ImageView
-        android:id="@+id/iv_item_bg"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:minHeight="10.0dip" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@color/bg_color"
+        >
 
-    <TextView
-        android:id="@+id/tv_menu_text"
-        style="?menulistitem_menuName"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent" />
+        <ImageView
+            android:id="@+id/iv_item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:minHeight="10.0dip" />
 
-    <ImageView
-        android:id="@+id/iv_more_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="10.0dip"
-        android:contentDescription="@string/description_menu"
-        android:src="@drawable/menu_more_details" />
+        <TextView
+            android:id="@+id/tv_menu_text"
+            style="?menulistitem_menuName"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/iv_more_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:contentDescription="@string/description_menu"
+            android:src="@drawable/ico_menu_more_details" />
+    </RelativeLayout>
+
 </RelativeLayout>

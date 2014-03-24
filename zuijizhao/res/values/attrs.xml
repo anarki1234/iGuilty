@@ -6,7 +6,6 @@
     <attr name="setting" format="reference"></attr>
     <attr name="menutopbar_usericon" format="reference"></attr>
     <attr name="menutopbar_username" format="reference"></attr>
-    <attr name="side_menu_col" format="reference"></attr>
     <attr name="menulist" format="reference"></attr>
     <attr name="menulistitem" format="reference"></attr>
     <attr name="menulistitem_menuName" format="reference"></attr>

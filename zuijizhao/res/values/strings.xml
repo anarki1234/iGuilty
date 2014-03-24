@@ -6,6 +6,7 @@
     <string name="default_user_name">用戶名称</string>
     <string name="description_setting">设置</string>
     <string name="description_menu">右箭头</string>
+    <string name="sdcard_unsable">外存储卡不可用</string>
     <string name="seperate_holder">seperate</string>
  <!-- 菜单占位符 -->
     <string-array name="menus">
@@ -26,7 +27,7 @@
     <string name="top">热门</string>
     <string name="drycargo">干货</string>
     <string name="freshcargo">嫩草</string>
-    <string name="title_activity_user_center">UserCenterActivity</string>
+    <string name="title_activity_user_center">用户中心</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 

@@ -1,12 +1,11 @@
 package com.klisly.iguilty.ui;
 
-import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-import com.klisly.iguilty.AppManager;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+
+import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import com.klisly.iguilty.AppManager;
 
 public class BaseActivity extends SlidingFragmentActivity {
 

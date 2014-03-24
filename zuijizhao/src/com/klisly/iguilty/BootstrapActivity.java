@@ -1,10 +1,10 @@
 package com.klisly.iguilty;
 
-import com.klisly.iguilty.ui.MenuContainerActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.klisly.iguilty.ui.MenuContainerActivity;
 
 
 

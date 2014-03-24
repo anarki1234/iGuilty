@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,8 +16,6 @@ import com.klisly.iguilty.adapter.MenuListAdapter;
 import com.klisly.iguilty.bean.MenuEntry;
 import com.klisly.iguilty.bean.MenuEntry.State;
 import com.klisly.iguilty.ui.MenuContainerActivity;
-import com.klisly.iguilty.ui.SettingActivity;
-import com.klisly.iguilty.ui.UserCenterActivity;
 import com.klisly.iguilty.utils.UIHelper;
 
 public class MenuFragment extends BaseFragment implements OnClickListener {
@@ -38,7 +35,7 @@ public class MenuFragment extends BaseFragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_menu, null);
 		v.findViewById(R.id.ll_btn_user).setOnClickListener(this);
-		v.findViewById(R.id.ib_btn_setting).setOnClickListener(this);
+		v.findViewById(R.id.rl_btn_setting).setOnClickListener(this);
 
 		menus = this.getActivity().getResources().getStringArray(R.array.menus);
 		ArrayList<MenuEntry> items = new ArrayList<MenuEntry>();
@@ -80,7 +77,7 @@ public class MenuFragment extends BaseFragment implements OnClickListener {
 		case R.id.ll_btn_user:
 			UIHelper.openUserCenterActivity((Activity)this.getActivity());
 			break;
-		case R.id.ib_btn_setting:
+		case R.id.rl_btn_setting:
 			UIHelper.openSettingActivity((Activity)this.getActivity());
 			break;
 		}

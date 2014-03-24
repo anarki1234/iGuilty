@@ -1,11 +1,11 @@
 package com.klisly.iguilty.fragment;
 
-import com.klisly.iguilty.R;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.klisly.iguilty.R;
 
 public class CheckFragment extends BaseFragment {
 
