@@ -1,34 +1,18 @@
 package com.klisly.iguilty;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InvalidClassException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.net.URLEncoder;
 import java.util.Hashtable;
 import java.util.Properties;
-import java.util.UUID;
+
+import android.app.Application;
+import android.os.AsyncTask;
 
 import com.klisly.iguilty.utils.StringUtils;
 
-import android.app.Application;
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.AudioManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Handler;
-import android.os.Message;
-
-public class ZuijzApplication extends Application {
+public class IGuiltyApplication extends Application {
 	
 	public static final int NETTYPE_WIFI = 0x01;
 	public static final int NETTYPE_CMWAP = 0x02;
@@ -42,14 +26,15 @@ public class ZuijzApplication extends Application {
 	private Hashtable<String, Object> memCacheRegion = new Hashtable<String, Object>();
 	
 	private String saveImagePath;//保存图片路径
-	
+	private IGuiltyQLiteOpenHelper mSqlHelper;
 	
 	@Override
 	public void onCreate() {
 		super.onCreate();
         //注册App异常崩溃处理器
         Thread.setDefaultUncaughtExceptionHandler(AppException.getAppExceptionHandler());
-        
+		mSqlHelper = new IGuiltyQLiteOpenHelper(this);
+		AppBaseTask.setApplication(this);
         init();
 	}
 
@@ -131,5 +116,53 @@ public class ZuijzApplication extends Application {
 	public void setSaveImagePath(String saveImagePath) {
 		this.saveImagePath = saveImagePath;
 	}	
+	
+	public IGuiltyQLiteOpenHelper getSqlHelper() {
+		return mSqlHelper;
+	}
+
+	public void setSqlHelper(IGuiltyQLiteOpenHelper sqlHelper) {
+		mSqlHelper = sqlHelper;
+	}
+	
+	
+	public static class AppBaseTask extends AsyncTask<String, Integer, String> {
+		protected OnCallBackListener mOnCallBackListener;
+		protected static IGuiltyApplication mApplication = null;
+		protected static IGuiltyQLiteOpenHelper mSqlHelper = null;
+		
+		@Override
+		protected String doInBackground(String... params) {
+			//
+			
+			return null;
+		}
+		
+		public AppBaseTask() {
+		}
+		
+ 		public AppBaseTask(OnCallBackListener onCallBackListener) {
+			mOnCallBackListener = onCallBackListener;
+		}
+		public static interface OnCallBackListener {
+			void onCallBack(String result);
+		}
+
+		public void setOnCallBackListener(OnCallBackListener listener) {
+			mOnCallBackListener = listener;
+		}
+
+		public static void setApplication(IGuiltyApplication application) {
+			mApplication = application;
+			mSqlHelper = mApplication.getSqlHelper();
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			if(mOnCallBackListener != null) {
+				mOnCallBackListener.onCallBack(result);
+			}
+		}
+	}
 	
 }

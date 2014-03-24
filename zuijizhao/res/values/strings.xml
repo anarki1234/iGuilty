@@ -26,7 +26,7 @@
     <string name="top">热门</string>
     <string name="drycargo">干货</string>
     <string name="freshcargo">嫩草</string>
-    <string name="title_activity_user_center">UserCenterActivity</string>
+    <string name="title_activity_user_center">用户中心</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 

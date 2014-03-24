@@ -69,38 +69,32 @@ public class MenuListAdapter extends BaseAdapter {
 			listItemView = (ListItemView) convertView.getTag();
 		}
 
-		convertView.setBackgroundResource(R.drawable.menu_item);
 		final MenuEntry menuEntry = listItems.get(position);
 
 		if (menuEntry.getName().equalsIgnoreCase("seperate")) {
 			convertView.setLayoutParams(new ListView.LayoutParams(
-					ListView.LayoutParams.MATCH_PARENT, 10));
-			convertView.setFocusable(false);
+					ListView.LayoutParams.MATCH_PARENT, 5));
+			convertView.setBackgroundResource(R.drawable.menu_seperator);
+			convertView.setClickable(false);
 		} else {
 			listItemView.mTvTitle.setText(menuEntry.getName());
-			if (menuEntry.getState() == State.CHECKED) {
-				convertView
-						.setBackgroundResource(R.drawable.side_menu_background_active);
-			} else {
-				convertView.setBackgroundResource(R.drawable.menu_item);
-			}
 
 			convertView.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
-					
+
 					for (int i = 0; i < listItems.size(); i++) {
 						listItems.get(i).setState(State.UNCHECKED);
 					}
 					menuEntry.setState(State.CHECKED);
-					
+
 					context.switchFragment(menuEntry.getFragment());
 					notifyDataChange();
 				}
 			});
 		}
-
+		
 		return convertView;
 	}
 

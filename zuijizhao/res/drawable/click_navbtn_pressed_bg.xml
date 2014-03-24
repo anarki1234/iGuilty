@@ -16,7 +16,6 @@
                 android:color="@color/light_transparent" />
 
        		<solid android:color="@color/light_transparent"/> 
-       		<corners android:radius="10dp"></corners>
         </shape>
     </item>
 

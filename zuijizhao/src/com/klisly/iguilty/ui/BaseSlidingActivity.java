@@ -1,7 +1,7 @@
 package com.klisly.iguilty.ui;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-import com.klisly.iguilty.ZuijzApplication;
+import com.klisly.iguilty.IGuiltyApplication;
 import com.klisly.iguilty.fragment.BaseFragment;
 import com.klisly.iguilty.fragment.HotFragment;
 import com.klisly.iguilty.fragment.MenuFragment;

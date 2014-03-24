@@ -7,7 +7,7 @@
     <color name="transparent">#00000000</color>
     <color name="half_transparent">#22000000</color>
     <color name="hard_transparent">#b2000000</color>
-    <color name="light_transparent">#12000000</color>
+    <color name="light_transparent">#a2000000</color>
     <color name="red">#990000</color>
     <color name="green">#a7d500</color>
     <color name="green_halfalpha">#f0009900</color>
@@ -32,6 +32,10 @@
     <color name="none_color">#00000000</color>
     <color name="bule_overlay">#660D92DD</color>
     <color name="recorder_bg">#ff191919</color>
-    <color name="bg_color">#B0875B</color>
+    <color name="bg_color">#802D3541</color>
+    <color name="light_bg_color">#602D3541</color>
+    <color name="pressed_bg_color">#b02D3541</color>
+    
+    <color name="light_pink">#CCFFFF</color>
 
 </resources>

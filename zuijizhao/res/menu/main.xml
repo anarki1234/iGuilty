@@ -3,11 +3,11 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:icon="@drawable/side_user_avatar"
+        android:icon="@drawable/ico_sameple_avatar"
         android:showAsAction="always"/>
 <item
         android:id="@+id/action_setti"
         android:orderInCategory="100"
-        android:icon="@drawable/side_user_avatar"
+        android:icon="@drawable/ico_sameple_avatar"
         android:showAsAction="never"/>
 </menu>

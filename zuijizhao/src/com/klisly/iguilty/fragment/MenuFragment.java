@@ -38,7 +38,7 @@ public class MenuFragment extends BaseFragment implements OnClickListener {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_menu, null);
 		v.findViewById(R.id.ll_btn_user).setOnClickListener(this);
-		v.findViewById(R.id.ib_btn_setting).setOnClickListener(this);
+		v.findViewById(R.id.rl_btn_setting).setOnClickListener(this);
 
 		menus = this.getActivity().getResources().getStringArray(R.array.menus);
 		ArrayList<MenuEntry> items = new ArrayList<MenuEntry>();
@@ -80,7 +80,7 @@ public class MenuFragment extends BaseFragment implements OnClickListener {
 		case R.id.ll_btn_user:
 			UIHelper.openUserCenterActivity((Activity)this.getActivity());
 			break;
-		case R.id.ib_btn_setting:
+		case R.id.rl_btn_setting:
 			UIHelper.openSettingActivity((Activity)this.getActivity());
 			break;
 		}
